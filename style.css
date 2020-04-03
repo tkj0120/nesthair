@@ -1,0 +1,340 @@
+@charset "utf-8";
+
+/* ========================================
+    リセットcss
+========================================= */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-style:normal;
+	font-weight: normal;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html{overflow-y: scroll;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: ''; content: none;}
+input, textarea,{margin: 0; padding: 0;}
+ol, ul{list-style:none;}
+table{border-collapse: collapse; border-spacing:0;}
+caption, th{text-align: left;}
+a:focus {outline:none;}
+
+/* micro clearfix */
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {clear: both;}
+.cf {*zoom: 1;}
+
+
+/* ========================================
+    レイアウト
+========================================= */
+body {
+  /* background-color: red; */
+  background: url(images/bg.png);
+  border-top: 5px solid #345c39;
+  font-family: "Meiryo";
+}
+
+div#wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.box-shadow {
+  box-shadow: 0 2px 7px rgba(83,78,61,0.3);
+}
+
+div.clear {
+  clear: both;
+}
+
+header {
+  /* background-color: red; */
+  width: 960px;
+  height: 49px;
+  padding: 20px 0;
+  position: relative;
+}
+
+header h1 {
+  color: #555555;
+  font-size: 12px;
+  font-family: "Meiryo";
+  background-image: url(images/logo.png);
+  background-repeat: no-repeat;
+  padding-left: 51px;
+  line-height: 1;
+  height: 49px;
+  float: left;
+}
+
+header h1 span {
+  color: #734339;
+  font-size: 33px;
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+header nav {
+  float: right;
+  margin-top: 36px;
+}
+
+header nav ul li {
+  float: left;
+  margin-left: 29px;
+}
+
+header nav ul li:hover {
+  background: url(images/navbar.png);
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: bottom;
+  height: 36px;
+}
+
+header nav ul li a {
+  font-size: 16px;
+  color: #734339;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  height: 26px;
+}
+
+header nav ul li:hover a {
+  color: #345c39;
+  border-bottom: 4px solid #345c39;
+}
+
+header p#nav_tel {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+div#mainimage {
+  /* background-color: yellow; */
+  width: 950px;
+  height: 290px;
+  margin: 20px 0 20px 0;
+  border: 5px solid #fff;
+  /* box-shadow: 0 2px 7px rgba(83,78,61,0.3); */
+}
+
+div#left {
+  background-color: #fff;
+  width: 555px;
+  height: auto;
+  float: left;
+  margin-right: 20px;
+  /* box-shadow: 0 2px 7px rgba(83,78,61,0.3); */
+  padding: 10px;
+}
+
+div#left h2,
+div#left h3{
+  font-size: 17px;
+  font-weight: bold;
+  color: #734339;
+  border-left: 5px solid #ba3009;
+  padding-left: 10px;
+}
+
+div#left ul {
+  overflow: scroll;
+  width: 555px;
+  height: 145px;
+}
+
+div#left ul li {
+  font-size: 13px;
+  font-weight: normal;
+  color: #92727a;
+  border-bottom: 1px dotted #d0d0d0;
+  line-height: 32px;
+}
+
+div#left ul li span {
+  font-size: 12px;
+  font-weight: normal;
+  color: #b5b3b3;
+  margin-right: 15px;
+}
+
+div#right {
+  /* background-color: green; */
+  width: 365px;
+  height: 198px;
+  float: left;
+}
+
+div#right ul li {
+  line-height: 60px;
+  margin-bottom: 20px;
+}
+
+div#right ul li a {
+  display: block;
+  width: 225px;
+  height: 60px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #734339;
+  text-decoration: none;
+  padding-left: 140px;
+}
+
+div#right ul li a#contact {
+  background: url(images/contact.jpg);
+  /* display: block;
+  width: 365px;
+  height: 60px; */
+}
+
+div#right ul li a#blog {
+  background: url(images/blog.jpg);
+  /* display: block;
+  width: 365px;
+  height: 60px; */
+}
+
+footer {
+  background-color: #345c39;
+  width: 100%;
+  height: 58px;
+  margin-top: 20px;
+}
+
+footer p {
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  line-height: 58px;
+}
+
+h2#heading {
+  background: url(images/title.jpg);
+  height: 70px;
+  width: 925px;
+  border: 5px solid #fff;
+  margin-bottom: 20px;
+  color: #2f5734;
+  font-size: 27px;
+  font-weight: bold;
+  line-height: 70px;
+  padding-left: 23px;
+}
+
+div#left dl {
+  margin-top: 11px;
+}
+
+div#left dl dt {
+  font-size: 15px;
+  font-weight: normal;
+  color: #734339;
+}
+
+div#left dl dd {
+  font-size: 13px;
+  font-weight: normal;
+  color: #927e7a;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+div#left dl dd:last-child {
+  margin-bottom: 0;
+}
+
+div#left p#contact_text {
+  color: #927e7a;
+  font-size: 12px;
+  line-height: 18px;
+  background-color: #ffefea;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+td.form_title {
+  width: 131px;
+  height: 32px;
+  font-size: 15px;
+  color: #734339;
+  font-weight: bold;
+  vertical-align: top;
+}
+
+td.form_title label {
+  font-weight: bold;
+}
+
+td.form_content input#form_name,
+td.form_content input#form_tel {
+  width: 421px;
+  height: 22px;
+}
+
+td.form_content {
+  color: #a6a6a6;
+  font-size: 13px;
+}
+
+
+td.form_content input.form_time {
+  width: 47px;
+  height: 22px;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+td.form_content textarea {
+  width: 421px;
+  height: 83px;
+  border: 1px solid #a6a6a6;
+}
+
+p#submit {
+  text-align: right;
+}
+
+p#submit input {
+  background-color: #325a37;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  width: 136px;
+  height: 40px;
+}
+
+p#submit input:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
